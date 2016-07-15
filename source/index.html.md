@@ -19,7 +19,7 @@ search: true
 
 # Introduction
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
+Welcome to our API Service! You can use our API to access API endpoints, which can get information of various news.
 
 We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
 
@@ -30,32 +30,32 @@ This example API documentation page was created with [Slate](https://github.com/
 > To authorize, use this code:
 
 ```ruby
-require 'kittn'
+require 'simondoba-api'
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
+api = sdAPI::APIClient.authorize!('meowmeowmeow')
 ```
 
 ```python
-import kittn
+import simondoba-api
 
 api = kittn.authorize('meowmeowmeow')
 ```
 
 ```shell
 # With shell, you can just pass the correct header with each request
-curl "api_endpoint_here"
+curl "SijH6B5Q6xTSdudFSd1p2RRezDcKo2T4WKbKqbh9"
   -H "Authorization: meowmeowmeow"
 ```
 
 ```javascript
-const kittn = require('kittn');
+const kittn = require('simondoba-api');
 
 let api = kittn.authorize('meowmeowmeow');
 ```
 
 > Make sure to replace `meowmeowmeow` with your API key.
 
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
+Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://api.simondoba.com/developers).
 
 Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
 
@@ -65,9 +65,9 @@ Kittn expects for the API key to be included in all API requests to the server i
 You must replace <code>meowmeowmeow</code> with your personal API key.
 </aside>
 
-# Kittens
+# News
 
-## Get All Kittens
+## Get News based on the Category
 
 ```ruby
 require 'kittn'
@@ -84,7 +84,7 @@ api.kittens.get()
 ```
 
 ```shell
-curl "http://example.com/api/kittens"
+curl "http://api.simondoba.com/api/v1/news/key=meowmeowmeow&category=param"
   -H "Authorization: meowmeowmeow"
 ```
 
@@ -101,18 +101,16 @@ let kittens = api.kittens.get();
 [
   {
     "id": 1,
-    "name": "Fluffums",
-    "breed": "calico",
-    "fluffiness": 6,
-    "cuteness": 7
-  },
-  {
-    "id": 2,
-    "name": "Max",
-    "breed": "unknown",
-    "fluffiness": 5,
-    "cuteness": 10
+    "headline": "Brexit Aktuell",
+    "url": "https://..",
+    "image": {
+      url: "https://..."
+      width: "100"
+      height: "100"
+      }
   }
+  {
+
 ]
 ```
 
